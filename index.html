@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CristianValta Project</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="container">
+   
+    <div class="creator-info">
+      <img src="valta.jpg" alt="Valta" class="creator-photo" style="width: 100px; height: 100px; border-radius: 50%; display: block; margin: 0 auto 10px;">
+      <p style="text-align: center; margin: 0;">CristianValta Project</p>
+    </div>
+
+    <div id="loginBox">
+      <h2>Welcome To CristianValta Project!</h2>
+      <input type="text" id="username" placeholder="Username" />
+      <input type="password" id="password" placeholder="Password" />
+      <button onclick="login()">Login</button>
+    </div>
+
+    <div id="dashboard" class="hidden">
+      <h2>CristianValta03 Crasher</h2>
+      <input type="text" id="pesan" placeholder="Masukkan nomor target (62...)" />
+      <button onclick="toggleAttackMenu()">Attack Menu</button>
+
+      <div id="attackButtons" class="button-group hidden">
+        <button onclick="kirim('CrashInvis')">CrashInvis</button>
+        <button onclick="kirim('Fc-Close')">Fc-Close</button>
+        <button onclick="kirim('Invisible')">Invisible</button>
+        <button onclick="kirim('Fc-Invis')">Fc-Invis</button>
+      </div>
+
+      <div id="log"></div>
+      <div id="userWelcome" style="margin-top: 20px;"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    function toggleAttackMenu() {
+      const menu = document.getElementById("attackButtons");
+      menu.classList.toggle("hidden");
+    }
+  </script>
+</body>
+</html>
